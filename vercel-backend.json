@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "name": "hyt-backend",
+  "builds": [
+    {
+      "src": "backend/src/**/*.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/src/index.ts"
+    },
+    {
+      "src": "/health",
+      "dest": "backend/src/index.ts"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
