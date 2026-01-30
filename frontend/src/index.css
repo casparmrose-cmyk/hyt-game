@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-tennis-green text-club-white font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-club-white text-tennis-green font-medium rounded-lg
+           hover:bg-opacity-90 transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-clay-orange focus:ring-offset-2 focus:ring-offset-tennis-green;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-tennis-green-light text-club-white font-medium rounded-lg
+           hover:bg-tennis-green transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-clay-orange focus:ring-offset-2 focus:ring-offset-tennis-green;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-club-white text-tennis-green rounded-lg
+           placeholder:text-tennis-green-light placeholder:opacity-50
+           focus:outline-none focus:ring-2 focus:ring-clay-orange;
+  }
+
+  .card {
+    @apply bg-tennis-green-light rounded-2xl p-8 shadow-lg;
+  }
+
+  .answer-option {
+    @apply w-full px-6 py-4 bg-club-white text-tennis-green rounded-lg
+           hover:bg-clay-orange hover:text-club-white transition-all duration-200
+           cursor-pointer font-medium text-left;
+  }
+
+  .answer-option.selected {
+    @apply bg-clay-orange text-club-white;
+  }
+
+  .container-hyt {
+    @apply max-w-4xl mx-auto px-6 py-12;
+  }
+}

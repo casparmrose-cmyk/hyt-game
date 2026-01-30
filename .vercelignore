@@ -1,0 +1,8 @@
+backend
+shared/src
+node_modules
+*.db
+*.db-shm
+*.db-wal
+.env.local
+.env
