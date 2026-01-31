@@ -2,7 +2,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { randomUUID } from 'crypto';
 import { dbHelpers } from '../db/schema.js';
-import type { User, AuthResponse } from '@hyt/shared';
+import type { User, AuthResponse } from '../types.js';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'hyt-secret-key-change-in-production';
 const SALT_ROUNDS = 10;

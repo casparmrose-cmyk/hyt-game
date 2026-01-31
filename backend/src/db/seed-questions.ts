@@ -1,5 +1,5 @@
 import { dbHelpers } from './schema.js';
-import { QuestionType, QuestionCategory } from '@hyt/shared';
+import { QuestionType, QuestionCategory } from '../types.js';
 import { randomUUID } from 'crypto';
 
 interface QuestionSeed {

@@ -6,7 +6,7 @@ import {
   type JoinRoomPayload,
   type SubmitAnswerPayload,
   type ConsentRevealPayload
-} from '@hyt/shared';
+} from '../types.js';
 
 const QUESTION_TIMER_MS = 60000; // 60 seconds per question
 

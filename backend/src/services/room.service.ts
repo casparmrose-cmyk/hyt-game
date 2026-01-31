@@ -9,7 +9,7 @@ import type {
   RoomStatus,
   GameSummary,
   PlayerCluster
-} from '@hyt/shared';
+} from '../types.js';
 
 export class RoomService {
   static createRoom(hostId: string, questionCount: 10 | 20 | 30): Room {
