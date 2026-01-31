@@ -502,6 +502,350 @@ const questions: QuestionSeed[] = [
       { label: 'C', value: 'Only if others could too' },
       { label: 'D', value: 'Need more info' }
     ]
+  },
+
+  // CATEGORY 8 – LEADERSHIP AND MANAGEMENT
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'Your team missed a critical deadline. What do you do?',
+    options: [
+      { label: 'A', value: 'Take full responsibility publicly' },
+      { label: 'B', value: 'Identify who caused the delay' },
+      { label: 'C', value: 'Focus on solutions without blame' },
+      { label: 'D', value: 'Escalate to senior leadership' }
+    ],
+    insight: 'Leadership under pressure reveals whether we protect our team or protect ourselves.'
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'A team member is underperforming but trying hard. What do you do?',
+    options: [
+      { label: 'A', value: 'Give direct feedback immediately' },
+      { label: 'B', value: 'Wait and observe longer' },
+      { label: 'C', value: 'Reassign their tasks quietly' },
+      { label: 'D', value: 'Have them self-assess first' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'You discover a team member is paid significantly less for equal work. What do you do?',
+    options: [
+      { label: 'A', value: 'Tell them immediately' },
+      { label: 'B', value: 'Go to HR first' },
+      { label: 'C', value: 'Stay out of it' },
+      { label: 'D', value: 'Advocate for them anonymously' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.CONFESSIONS,
+    text: 'Your manager takes credit for your work. What do you do?',
+    options: [
+      { label: 'A', value: 'Confront them privately' },
+      { label: 'B', value: 'Document and escalate' },
+      { label: 'C', value: 'Let it go this time' },
+      { label: 'D', value: 'Make contribution visible next time' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.FRIENDSHIP,
+    text: 'Two team members have a personality clash. You:',
+    options: [
+      { label: 'A', value: 'Mediate between them' },
+      { label: 'B', value: 'Give them space to resolve it' },
+      { label: 'C', value: 'Separate them on projects' },
+      { label: 'D', value: 'Address it in a team meeting' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'Your project is failing but you can hide it for 2 more weeks. Do you:',
+    options: [
+      { label: 'A', value: 'Report it now' },
+      { label: 'B', value: 'Try to fix it first' },
+      { label: 'C', value: 'Wait until asked' },
+      { label: 'D', value: 'Blame external factors' }
+    ],
+    insight: 'How we handle failure reveals our relationship with honesty and self-preservation.'
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'Your project is on track but a colleague\'s is failing. They need your resources. Do you:',
+    options: [
+      { label: 'A', value: 'Help them fully' },
+      { label: 'B', value: 'Help but protect your timeline' },
+      { label: 'C', value: 'Decline politely' },
+      { label: 'D', value: 'Escalate to management' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'In a crisis with limited info, do you:',
+    options: [
+      { label: 'A', value: 'Decide fast and commit' },
+      { label: 'B', value: 'Gather more data first' },
+      { label: 'C', value: 'Consult the team' },
+      { label: 'D', value: 'Wait for leadership' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'Three urgent tasks: client emergency, team crisis, or strategic opportunity. You prioritise:',
+    options: [
+      { label: 'A', value: 'Client emergency' },
+      { label: 'B', value: 'Team crisis' },
+      { label: 'C', value: 'Strategic opportunity' },
+      { label: 'D', value: 'Delegate all three' }
+    ]
+  },
+
+  // CATEGORY 9 – POLITICAL DILEMMAS
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'A policy would help 60% of people but significantly harm 40%. Support it?',
+    options: [
+      { label: 'A', value: 'Yes, majority wins' },
+      { label: 'B', value: 'No, protect the minority' },
+      { label: 'C', value: 'Depends on the harm' },
+      { label: 'D', value: 'Needs compromise' }
+    ],
+    insight: 'Utilitarian vs rights-based thinking - do we maximize good or protect individuals?'
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'Tax the wealthy heavily to fund social programs?',
+    options: [
+      { label: 'A', value: 'Yes, redistribute wealth' },
+      { label: 'B', value: 'No, they earned it' },
+      { label: 'C', value: 'Moderately yes' },
+      { label: 'D', value: 'Depends on economic impact' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'Free speech vs preventing harm. Where\'s the line?',
+    options: [
+      { label: 'A', value: 'Protect all speech' },
+      { label: 'B', value: 'Ban harmful speech' },
+      { label: 'C', value: 'Case by case' },
+      { label: 'D', value: 'Let platforms decide' }
+    ]
+  },
+  {
+    type: QuestionType.TRADE_OFF,
+    category: QuestionCategory.VALUES,
+    text: 'Climate action approach?',
+    options: [
+      { label: 'A', value: 'Immediate radical change' },
+      { label: 'B', value: 'Gradual transition' },
+      { label: 'C', value: 'Let market decide' },
+      { label: 'D', value: 'Adapt, don\'t prevent' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'Democracy works better if voting is:',
+    options: [
+      { label: 'A', value: 'Mandatory for everyone' },
+      { label: 'B', value: 'Optional but encouraged' },
+      { label: 'C', value: 'Truly optional' },
+      { label: 'D', value: 'Limited to the informed' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'A protest blocks a hospital entrance to raise awareness. Justified?',
+    options: [
+      { label: 'A', value: 'Yes, for the cause' },
+      { label: 'B', value: 'No, endangers people' },
+      { label: 'C', value: 'Depends on the cause' },
+      { label: 'D', value: 'Protest elsewhere' }
+    ]
+  },
+
+  // CATEGORY 10 – CHARACTER UNDER PRESSURE
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'You witness your boss commit fraud. What do you do?',
+    options: [
+      { label: 'A', value: 'Report it immediately' },
+      { label: 'B', value: 'Confront them first' },
+      { label: 'C', value: 'Document it quietly' },
+      { label: 'D', value: 'Resign without reporting' }
+    ],
+    insight: 'Integrity vs self-preservation - one of the hardest choices we face.'
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'Dream job offer requires lying about your background. Accept?',
+    options: [
+      { label: 'A', value: 'Yes, need the opportunity' },
+      { label: 'B', value: 'No, never compromise' },
+      { label: 'C', value: 'Negotiate honesty' },
+      { label: 'D', value: 'Accept, come clean later' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'A colleague confides they\'re job hunting. Your boss asks if anyone\'s leaving. Do you:',
+    options: [
+      { label: 'A', value: 'Tell the truth' },
+      { label: 'B', value: 'Say you don\'t know' },
+      { label: 'C', value: 'Warn colleague first' },
+      { label: 'D', value: 'Lie to protect them' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'Your company\'s product is unsafe but leadership won\'t act. Do you:',
+    options: [
+      { label: 'A', value: 'Whistleblow publicly' },
+      { label: 'B', value: 'Resign quietly' },
+      { label: 'C', value: 'Keep pushing internally' },
+      { label: 'D', value: 'Nothing, need the job' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'You accidentally see confidential salary data. Everyone\'s underpaid except you. Do you:',
+    options: [
+      { label: 'A', value: 'Tell everyone' },
+      { label: 'B', value: 'Tell leadership' },
+      { label: 'C', value: 'Stay quiet' },
+      { label: 'D', value: 'Quit in solidarity' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.FRIENDSHIP,
+    text: 'Your friend is interviewing at your company. They\'re not a good fit but need the job. Do you:',
+    options: [
+      { label: 'A', value: 'Give good reference anyway' },
+      { label: 'B', value: 'Be honest about fit' },
+      { label: 'C', value: 'Recuse yourself' },
+      { label: 'D', value: 'Help them prepare honestly' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'You can frame someone else for your mistake. They won\'t be severely punished. Do you?',
+    options: [
+      { label: 'A', value: 'Yes, survival first' },
+      { label: 'B', value: 'No, never' },
+      { label: 'C', value: 'Depends on stakes' },
+      { label: 'D', value: 'Confess but minimize' }
+    ]
+  },
+
+  // CATEGORY 11 – DEEPER PHILOSOPHY
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.IMAGINATION,
+    text: 'Is it better to exist and suffer, or never exist at all?',
+    options: [
+      { label: 'A', value: 'Exist and suffer' },
+      { label: 'B', value: 'Never exist' },
+      { label: 'C', value: 'Depends on severity' },
+      { label: 'D', value: 'Can\'t compare' }
+    ],
+    insight: 'The antinatalism question - philosophers have debated this for centuries.'
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.IMAGINATION,
+    text: 'Everyone you know forgets you but lives happily, or they die but remember you forever. Choose:',
+    options: [
+      { label: 'A', value: 'Forgotten but they live' },
+      { label: 'B', value: 'Dead but remembered' },
+      { label: 'C', value: 'Can\'t choose' },
+      { label: 'D', value: 'Depends who' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'Press a button to redistribute all wealth equally. You\'d lose most of yours. Do it?',
+    options: [
+      { label: 'A', value: 'Yes, for equality' },
+      { label: 'B', value: 'No, I earned it' },
+      { label: 'C', value: 'Depends how much I\'d lose' },
+      { label: 'D', value: 'Need more details' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'Is it morally wrong to have children given climate/political instability?',
+    options: [
+      { label: 'A', value: 'Yes, it\'s irresponsible' },
+      { label: 'B', value: 'No, life finds a way' },
+      { label: 'C', value: 'Depends on circumstances' },
+      { label: 'D', value: 'Personal choice only' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.IMAGINATION,
+    text: 'Your consciousness uploaded to a computer, original body dies. Are you still you?',
+    options: [
+      { label: 'A', value: 'Yes, consciousness is me' },
+      { label: 'B', value: 'No, I died' },
+      { label: 'C', value: 'Both versions exist' },
+      { label: 'D', value: 'Unknowable' }
+    ],
+    insight: 'The Ship of Theseus problem - what makes you, you?'
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.IMAGINATION,
+    text: 'You can eliminate one human emotion forever. Which?',
+    options: [
+      { label: 'A', value: 'Fear' },
+      { label: 'B', value: 'Anger' },
+      { label: 'C', value: 'Jealousy' },
+      { label: 'D', value: 'None, need all of them' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'A genie offers: cure all disease but remove all art, or keep both. Choose:',
+    options: [
+      { label: 'A', value: 'Cure disease, lose art' },
+      { label: 'B', value: 'Keep both' },
+      { label: 'C', value: 'Need to think' },
+      { label: 'D', value: 'Depends what "art" means' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.IMAGINATION,
+    text: 'Experience 1000 years of joy then cease to exist, or 80 years of mixed emotions then maybe heaven?',
+    options: [
+      { label: 'A', value: '1000 years guaranteed joy' },
+      { label: 'B', value: '80 years and maybe more' },
+      { label: 'C', value: 'Depends on heaven odds' },
+      { label: 'D', value: 'Can\'t decide' }
+    ]
   }
 ];
 
