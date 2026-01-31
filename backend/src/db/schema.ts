@@ -123,8 +123,9 @@ export const dbHelpers = {
       if (stmt.step()) {
         const row: any = {};
         const columns = stmt.getColumnNames();
+        const values = stmt.get(); // Call once and store
         columns.forEach((col: string, idx: number) => {
-          row[col] = stmt.get()[idx];
+          row[col] = values[idx];
         });
         stmt.free();
         return row;
