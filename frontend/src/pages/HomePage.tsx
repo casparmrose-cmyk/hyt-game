@@ -22,9 +22,19 @@ export function HomePage() {
   };
 
   const handleJoinRoom = () => {
-    if (joinRoomId.trim()) {
-      navigate(`/room/${joinRoomId.trim()}`);
+    const input = joinRoomId.trim();
+    if (!input) return;
+
+    // Extract room ID from URL if they pasted a full link
+    let roomId = input;
+    if (input.includes('/room/')) {
+      const match = input.match(/\/room\/([a-zA-Z0-9-]+)/);
+      if (match) {
+        roomId = match[1];
+      }
     }
+
+    navigate(`/room/${roomId}`);
   };
 
   return (
@@ -76,13 +86,19 @@ export function HomePage() {
             <h2 className="text-2xl font-serif mb-6 text-center">Join a Game</h2>
 
             <div className="space-y-4">
-              <input
-                type="text"
-                placeholder="Enter room code"
-                value={joinRoomId}
-                onChange={(e) => setJoinRoomId(e.target.value)}
-                className="input-field"
-              />
+              <div>
+                <input
+                  type="text"
+                  placeholder="Paste room ID or link here"
+                  value={joinRoomId}
+                  onChange={(e) => setJoinRoomId(e.target.value)}
+                  className="input-field"
+                  onKeyDown={(e) => e.key === 'Enter' && handleJoinRoom()}
+                />
+                <p className="text-xs opacity-60 mt-2">
+                  You can paste the full link or just the room ID
+                </p>
+              </div>
 
               <button
                 onClick={handleJoinRoom}

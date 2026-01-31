@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuthStore } from '../store/useAuthStore';
 
 export function AuthPage() {
@@ -8,6 +8,7 @@ export function AuthPage() {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
 
   const { login, register, isLoading, error, clearError } = useAuthStore();
 
@@ -21,7 +22,10 @@ export function AuthPage() {
       } else {
         await register(email, password, name);
       }
-      navigate('/');
+
+      // Redirect to the page they were trying to access, or home
+      const from = (location.state as any)?.from?.pathname || '/';
+      navigate(from, { replace: true });
     } catch {
       // Error handled in store
     }

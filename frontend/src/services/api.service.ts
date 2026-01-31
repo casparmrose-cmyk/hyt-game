@@ -64,6 +64,10 @@ class ApiService {
     this.clearToken();
   }
 
+  async me(): Promise<{ user: AuthResponse['user'] }> {
+    return this.fetch<{ user: AuthResponse['user'] }>('/auth/me');
+  }
+
   async createRoom(questionCount: 10 | 20 | 30): Promise<Room> {
     return this.fetch<Room>('/rooms/create', {
       method: 'POST',

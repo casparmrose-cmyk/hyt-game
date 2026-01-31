@@ -12,14 +12,23 @@ export function Lobby({ room }: LobbyProps) {
   const { user } = useAuthStore();
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
+  const [codeCopied, setCodeCopied] = useState(false);
 
   const isHost = user?.id === room.hostId;
   const shareUrl = `${window.location.origin}/room/${room.id}`;
+  // Generate a readable 6-character game code from the room ID
+  const gameCode = room.id.slice(-6).toUpperCase();
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(shareUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleCopyCode = () => {
+    navigator.clipboard.writeText(room.id);
+    setCodeCopied(true);
+    setTimeout(() => setCodeCopied(false), 2000);
   };
 
   const handleStartGame = () => {
@@ -39,6 +48,21 @@ export function Lobby({ room }: LobbyProps) {
       </div>
 
       <div className="max-w-2xl mx-auto space-y-6">
+        <div className="card">
+          <h2 className="text-xl font-serif mb-4">Game Code</h2>
+          <div className="flex gap-3 items-center">
+            <div className="flex-1 text-center">
+              <div className="text-4xl font-mono font-bold tracking-widest bg-club-white text-tennis-green px-6 py-4 rounded-lg">
+                {gameCode}
+              </div>
+              <p className="text-sm opacity-70 mt-2">Share this code with friends</p>
+            </div>
+            <button onClick={handleCopyCode} className="btn-secondary">
+              {codeCopied ? 'Copied!' : 'Copy'}
+            </button>
+          </div>
+        </div>
+
         <div className="card">
           <h2 className="text-xl font-serif mb-4">Share Link</h2>
           <div className="flex gap-3">
