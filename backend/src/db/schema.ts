@@ -109,34 +109,48 @@ export function getDb(): SqlJsDatabase {
 export const dbHelpers = {
   prepare: (sql: string) => ({
     run: (...params: any[]) => {
-      db.run(sql, params);
+      const stmt = db.prepare(sql);
+      stmt.bind(params);
+      stmt.step();
+      stmt.free();
       saveDatabase();
       return { changes: db.getRowsModified() };
     },
     get: (...params: any[]) => {
-      const result = db.exec(sql, params);
-      if (result.length === 0 || result[0].values.length === 0) return null;
+      const stmt = db.prepare(sql);
+      stmt.bind(params);
 
-      const columns = result[0].columns;
-      const values = result[0].values[0];
-      const row: any = {};
-      columns.forEach((col: string, idx: number) => {
-        row[col] = values[idx];
-      });
-      return row;
+      if (stmt.step()) {
+        const row: any = {};
+        const columns = stmt.getColumnNames();
+        columns.forEach((col: string, idx: number) => {
+          row[col] = stmt.get()[idx];
+        });
+        stmt.free();
+        return row;
+      }
+
+      stmt.free();
+      return null;
     },
     all: (...params: any[]) => {
-      const result = db.exec(sql, params);
-      if (result.length === 0) return [];
+      const stmt = db.prepare(sql);
+      stmt.bind(params);
 
-      const columns = result[0].columns;
-      return result[0].values.map((values: any) => {
+      const rows: any[] = [];
+      const columns = stmt.getColumnNames();
+
+      while (stmt.step()) {
         const row: any = {};
+        const values = stmt.get();
         columns.forEach((col: string, idx: number) => {
           row[col] = values[idx];
         });
-        return row;
-      });
+        rows.push(row);
+      }
+
+      stmt.free();
+      return rows;
     }
   })
 };
