@@ -107,7 +107,8 @@ export function setupGameSocket(io: Server) {
         // Check if all players have answered
         if (answers.length === room!.players.length) {
           io.to(roomId).emit(SocketEvent.ALL_ANSWERS_IN, { questionId });
-          setTimeout(() => showReveal(io, roomId, questionId), 1000);
+          // Show reveal immediately once everyone has answered
+          showReveal(io, roomId, questionId);
         }
       } catch (error: any) {
         socket.emit(SocketEvent.ERROR, { message: error.message });
@@ -169,12 +170,16 @@ function startQuestion(io: Server, roomId: string, questionIndex: number) {
     timerMs: QUESTION_TIMER_MS
   });
 
-  // Auto-advance after timer
+  // Auto-advance after timer only if ALL players have answered
   setTimeout(() => {
+    const currentRoom = RoomService.getRoom(roomId);
+    if (!currentRoom) return;
+
     const answers = RoomService.getAnswersForQuestion(roomId, questionId);
-    if (answers.length > 0) {
+    // Only show reveal if all players have answered
+    if (answers.length === currentRoom.players.length) {
       io.to(roomId).emit(SocketEvent.ALL_ANSWERS_IN, { questionId });
-      setTimeout(() => showReveal(io, roomId, questionId), 1000);
+      showReveal(io, roomId, questionId);
     }
   }, QUESTION_TIMER_MS);
 }

@@ -20,7 +20,8 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Pretended something wasn\'t happening' },
       { label: 'B', value: 'Lied to get out of something' },
       { label: 'C', value: 'Over-shared with a stranger' },
-      { label: 'D', value: 'Caused a scene' }
+      { label: 'D', value: 'Caused a scene' },
+      { label: 'E', value: 'Still not admitting it' }
     ]
   },
   {
@@ -31,7 +32,32 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Romantic rejection moment' },
       { label: 'B', value: 'Work or school failure' },
       { label: 'C', value: 'Social media mishap' },
-      { label: 'D', value: 'I\'m taking this to the grave' }
+      { label: 'D', value: 'Physical or bodily incident' },
+      { label: 'E', value: 'I\'m taking this to the grave' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.CONFESSIONS,
+    text: "What's the strangest text you've ever received?",
+    options: [
+      { label: 'A', value: 'Wrong number chaos' },
+      { label: 'B', value: 'Accidental confession' },
+      { label: 'C', value: 'Passive-aggressive message' },
+      { label: 'D', value: 'Explicit by mistake' },
+      { label: 'E', value: 'Still don\'t know what it meant' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.CONFESSIONS,
+    text: "What's the cringiest thing you've ever posted online?",
+    options: [
+      { label: 'A', value: 'Emotional overshare' },
+      { label: 'B', value: 'Try-hard caption' },
+      { label: 'C', value: 'Drunk post' },
+      { label: 'D', value: 'Opinion that aged badly' },
+      { label: 'E', value: 'Deleted within minutes' }
     ]
   },
   {
@@ -42,7 +68,20 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Something I said' },
       { label: 'B', value: 'Something I didn\'t say' },
       { label: 'C', value: 'Hurting someone unintentionally' },
-      { label: 'D', value: 'Choosing myself over others' }
+      { label: 'D', value: 'Choosing myself' },
+      { label: 'E', value: 'Still figuring it out' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.CONFESSIONS,
+    text: 'Who do you wish you could reconnect with?',
+    options: [
+      { label: 'A', value: 'Old friend' },
+      { label: 'B', value: 'Former partner' },
+      { label: 'C', value: 'Family member' },
+      { label: 'D', value: 'Mentor' },
+      { label: 'E', value: 'Someone who\'s gone' }
     ]
   },
   {
@@ -53,7 +92,8 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Not at all' },
       { label: 'B', value: 'Slightly' },
       { label: 'C', value: 'A lot' },
-      { label: 'D', value: 'Completely different person' }
+      { label: 'D', value: 'Completely different person' },
+      { label: 'E', value: 'Depends on power dynamics' }
     ]
   },
   {
@@ -64,7 +104,8 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'In crowds' },
       { label: 'B', value: 'Late at night' },
       { label: 'C', value: 'When things are going well' },
-      { label: 'D', value: 'When things fall apart' }
+      { label: 'D', value: 'When things fall apart' },
+      { label: 'E', value: 'Rarely' }
     ]
   },
   {
@@ -75,7 +116,8 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Money' },
       { label: 'B', value: 'Time pressure' },
       { label: 'C', value: 'Other people\'s opinions' },
-      { label: 'D', value: 'Letting people down' }
+      { label: 'D', value: 'Uncertainty' },
+      { label: 'E', value: 'Letting people down' }
     ]
   },
   {
@@ -86,7 +128,8 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'To avoid conflict' },
       { label: 'B', value: 'To protect someone' },
       { label: 'C', value: 'To look better' },
-      { label: 'D', value: 'Can\'t remember' }
+      { label: 'D', value: 'Out of habit' },
+      { label: 'E', value: 'Can\'t remember' }
     ]
   },
 
@@ -99,7 +142,20 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Deep conversations' },
       { label: 'B', value: 'Laughing together' },
       { label: 'C', value: 'Doing hard things together' },
-      { label: 'D', value: 'Quiet presence' }
+      { label: 'D', value: 'Shared history' },
+      { label: 'E', value: 'Quiet presence' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.FRIENDSHIP,
+    text: 'What\'s one thing you wish we did more as friends?',
+    options: [
+      { label: 'A', value: 'Trips' },
+      { label: 'B', value: 'Honest conversations' },
+      { label: 'C', value: 'Checking in' },
+      { label: 'D', value: 'Celebrating wins' },
+      { label: 'E', value: 'Nothing, it\'s good' }
     ]
   },
   {
@@ -110,7 +166,20 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Leader' },
       { label: 'B', value: 'Mediator' },
       { label: 'C', value: 'Challenger' },
-      { label: 'D', value: 'Observer' }
+      { label: 'D', value: 'Entertainer' },
+      { label: 'E', value: 'Observer' }
+    ]
+  },
+  {
+    type: QuestionType.PREDICTION,
+    category: QuestionCategory.FRIENDSHIP,
+    text: 'Who in this group would you trust most with a secret?',
+    options: [
+      { label: 'A', value: 'Person A' },
+      { label: 'B', value: 'Person B' },
+      { label: 'C', value: 'Person C' },
+      { label: 'D', value: 'Depends on the secret' },
+      { label: 'E', value: 'None of you' }
     ]
   },
   {
@@ -121,7 +190,8 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Talk immediately' },
       { label: 'B', value: 'Take time first' },
       { label: 'C', value: 'Use humour' },
-      { label: 'D', value: 'Avoid it' }
+      { label: 'D', value: 'Write it out' },
+      { label: 'E', value: 'Avoid it' }
     ]
   },
   {
@@ -132,7 +202,8 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Yes, always' },
       { label: 'B', value: 'Sometimes' },
       { label: 'C', value: 'No, it\'s limiting' },
-      { label: 'D', value: 'Depends on life stage' }
+      { label: 'D', value: 'Depends on life stage' },
+      { label: 'E', value: 'I\'m undecided' }
     ]
   },
 
@@ -160,6 +231,18 @@ const questions: QuestionSeed[] = [
     ]
   },
   {
+    type: QuestionType.TRADE_OFF,
+    category: QuestionCategory.VALUES,
+    text: 'Progress needs more…',
+    options: [
+      { label: 'A', value: 'Rule breakers' },
+      { label: 'B', value: 'Rule followers' },
+      { label: 'C', value: 'Both equally' },
+      { label: 'D', value: 'Depends on the moment' }
+    ],
+    insight: 'This group leans towards stability over risk'
+  },
+  {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.VALUES,
     text: 'Are humans mostly…',
@@ -181,8 +264,32 @@ const questions: QuestionSeed[] = [
       { label: 'D', value: 'Depends on harm caused' }
     ]
   },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'Is religion a net positive so far?',
+    options: [
+      { label: 'A', value: 'Yes' },
+      { label: 'B', value: 'No' },
+      { label: 'C', value: 'Mixed' },
+      { label: 'D', value: 'Depends where' },
+      { label: 'E', value: 'Unsure' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.VALUES,
+    text: 'If everyone couldn\'t lie, the world would be…',
+    options: [
+      { label: 'A', value: 'Better' },
+      { label: 'B', value: 'Worse' },
+      { label: 'C', value: 'Chaotic' },
+      { label: 'D', value: 'More honest but harsher' },
+      { label: 'E', value: 'Short-lived' }
+    ]
+  },
 
-  // CATEGORY 4 – COGNITIVE BIASES AND DECISION MAKING
+  // CATEGORY 4 – MIND TRICKS AND DECISION STYLE
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.MIND_TRICKS,
@@ -192,44 +299,17 @@ const questions: QuestionSeed[] = [
       { label: 'B', value: '5p' },
       { label: 'C', value: '1p' },
       { label: 'D', value: 'I\'m guessing' }
-    ],
-    insight: 'Most people guess 10p. The answer is 5p. This shows how intuition can mislead us.'
+    ]
   },
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.MIND_TRICKS,
-    text: 'You read: "A new study shows eating chocolate reduces stress." What\'s your first thought?',
+    text: 'Which is more likely?',
     options: [
-      { label: 'A', value: 'Sounds great, I believe it' },
-      { label: 'B', value: 'Who funded the study?' },
-      { label: 'C', value: 'Share it immediately' },
-      { label: 'D', value: 'Ignore it completely' }
-    ],
-    insight: 'How we react to news reveals our confirmation bias and critical thinking style.'
-  },
-  {
-    type: QuestionType.SCENARIO,
-    category: QuestionCategory.MIND_TRICKS,
-    text: 'You see a plane crash on the news. Your next thought about flying is…',
-    options: [
-      { label: 'A', value: 'Flying feels more dangerous' },
-      { label: 'B', value: 'Still statistically safe' },
-      { label: 'C', value: 'I\'ll avoid it for a while' },
-      { label: 'D', value: 'Doesn\'t change anything' }
-    ],
-    insight: 'This shows availability bias - how recent events shape our risk perception.'
-  },
-  {
-    type: QuestionType.SCENARIO,
-    category: QuestionCategory.MIND_TRICKS,
-    text: 'A doctor says a surgery has a "90% survival rate" vs "10% mortality rate". Which sounds better?',
-    options: [
-      { label: 'A', value: '90% survival' },
-      { label: 'B', value: '10% mortality' },
-      { label: 'C', value: 'Same thing' },
-      { label: 'D', value: 'Depends on context' }
-    ],
-    insight: 'Framing effect - the same information feels different based on presentation.'
+      { label: 'A', value: 'Linda is a bank teller' },
+      { label: 'B', value: 'Linda is a bank teller and active in feminism' },
+      { label: 'C', value: 'Both equally likely' }
+    ]
   },
   {
     type: QuestionType.SCENARIO,
@@ -249,56 +329,119 @@ const questions: QuestionSeed[] = [
     options: [
       { label: 'A', value: 'Action' },
       { label: 'B', value: 'Inaction' },
-      { label: 'C', value: 'Equal' },
+      { label: 'C', value: 'They\'re equal' },
       { label: 'D', value: 'Depends on outcome' }
     ]
   },
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.MIND_TRICKS,
-    text: 'Would you take a 50% chance to win £150 or lose £100?',
+    text: 'Would you take a 50 percent chance to win £150 or lose £100?',
     options: [
       { label: 'A', value: 'Yes' },
       { label: 'B', value: 'No' },
       { label: 'C', value: 'Only if stakes were higher' },
-      { label: 'D', value: 'Depends on my mood' }
-    ],
-    insight: 'Most people say no - we feel losses twice as strongly as equivalent gains.'
+      { label: 'D', value: 'Depends on mood' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MIND_TRICKS,
+    text: 'Which sounds better?',
+    options: [
+      { label: 'A', value: '90 percent survive' },
+      { label: 'B', value: '10 percent die' },
+      { label: 'C', value: 'Same thing' }
+    ]
   },
 
-  // CATEGORY 5 – MORAL DILEMMAS
+  // CATEGORY 5 – MORAL DILEMMAS AND IMPOSSIBLE CHOICES
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.MORAL_DILEMMAS,
-    text: 'A runaway trolley will kill 5 people. You can pull a lever to divert it, killing 1 person instead. Do you pull it?',
+    text: 'A trolley will kill five people. You can divert it to kill one person who knowingly put themselves on the track. Do you act?',
     options: [
       { label: 'A', value: 'Yes' },
       { label: 'B', value: 'No' },
-      { label: 'C', value: 'Depends who the 1 person is' },
-      { label: 'D', value: 'I\'d freeze' }
+      { label: 'C', value: 'Depends who it is' },
+      { label: 'D', value: 'Freeze' }
     ]
   },
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.MORAL_DILEMMAS,
-    text: 'Same situation, but now you must push someone off a bridge to stop the trolley. Do you push?',
+    text: 'A trolley can only be stopped because one person\'s body will physically block it. Do you divert it?',
+    options: [
+      { label: 'A', value: 'Yes' },
+      { label: 'B', value: 'No' },
+      { label: 'C', value: 'Only if anonymous' },
+      { label: 'D', value: 'I couldn\'t act' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'You can push one person to stop a trolley killing five. Do you push?',
     options: [
       { label: 'A', value: 'Yes' },
       { label: 'B', value: 'No' },
       { label: 'C', value: 'Only in theory' },
       { label: 'D', value: 'Never' }
-    ],
-    insight: 'Most people say yes to pulling a lever, but no to pushing. Same outcome, different feeling.'
+    ]
   },
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.MORAL_DILEMMAS,
-    text: 'You can steal a drug to save your partner\'s life. Stealing guarantees survival, obeying the law guarantees death. What do you do?',
+    text: 'You can steal a drug to save your partner\'s life. Stealing guarantees survival. Obeying the law guarantees death. What do you do?',
     options: [
       { label: 'A', value: 'Steal it' },
       { label: 'B', value: 'Don\'t steal it' },
-      { label: 'C', value: 'Try another way first' },
+      { label: 'C', value: 'Try another way' },
+      { label: 'D', value: 'Freeze' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'A riot will end if you falsely imprison one innocent person. Otherwise many will be badly injured. Do you imprison them?',
+    options: [
+      { label: 'A', value: 'Yes' },
+      { label: 'B', value: 'No' },
+      { label: 'C', value: 'Only temporarily' },
+      { label: 'D', value: 'Depends on scale' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'Five patients need organs today. One healthy person could save them all. No one will ever know. Do you act?',
+    options: [
+      { label: 'A', value: 'Yes' },
+      { label: 'B', value: 'No' },
+      { label: 'C', value: 'Never directly' },
       { label: 'D', value: 'I don\'t know' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'A vaccine will save thousands but will certainly kill a small number. Do you approve it?',
+    options: [
+      { label: 'A', value: 'Approve' },
+      { label: 'B', value: 'Reject' },
+      { label: 'C', value: 'Delay' },
+      { label: 'D', value: 'Require consent' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.MORAL_DILEMMAS,
+    text: 'You can end a war instantly by killing thousands now, or let it continue and kill tens of thousands later. Do you act?',
+    options: [
+      { label: 'A', value: 'Act now' },
+      { label: 'B', value: 'Don\'t act' },
+      { label: 'C', value: 'Depends on certainty' },
+      { label: 'D', value: 'Refuse responsibility' }
     ]
   },
   {
@@ -315,18 +458,18 @@ const questions: QuestionSeed[] = [
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.MORAL_DILEMMAS,
-    text: 'A self-driving car must choose in an unavoidable crash. It should prioritise…',
+    text: 'A self-driving car must choose. Prioritise…',
     options: [
-      { label: 'A', value: 'The passenger' },
-      { label: 'B', value: 'Minimizing total harm' },
-      { label: 'C', value: 'Protecting children' },
+      { label: 'A', value: 'Passenger' },
+      { label: 'B', value: 'Least total harm' },
+      { label: 'C', value: 'Children' },
       { label: 'D', value: 'Random chance' }
     ]
   },
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.MORAL_DILEMMAS,
-    text: 'An AI can maximize happiness by subtly manipulating your choices without you knowing. Deploy it?',
+    text: 'An AI can maximise happiness by manipulating behaviour without consent. Deploy it?',
     options: [
       { label: 'A', value: 'Yes' },
       { label: 'B', value: 'No' },
@@ -337,27 +480,16 @@ const questions: QuestionSeed[] = [
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.MORAL_DILEMMAS,
-    text: 'You witness someone shoplifting baby formula. They look desperate. Do you report them?',
+    text: 'You can live forever but can never die and must watch everyone you love die. Do you accept?',
     options: [
-      { label: 'A', value: 'Yes, it\'s theft' },
-      { label: 'B', value: 'No, they need help' },
-      { label: 'C', value: 'Offer to pay for it' },
-      { label: 'D', value: 'Pretend I didn\'t see' }
-    ]
-  },
-  {
-    type: QuestionType.SCENARIO,
-    category: QuestionCategory.MORAL_DILEMMAS,
-    text: 'You find £1000 cash on the street with no ID nearby. What do you do?',
-    options: [
-      { label: 'A', value: 'Keep it' },
-      { label: 'B', value: 'Turn it in to police' },
-      { label: 'C', value: 'Wait there for someone' },
-      { label: 'D', value: 'Donate it to charity' }
+      { label: 'A', value: 'Yes' },
+      { label: 'B', value: 'No' },
+      { label: 'C', value: 'Only if others could too' },
+      { label: 'D', value: 'Need more info' }
     ]
   },
 
-  // CATEGORY 6 – FOOD AND LIFESTYLE
+  // CATEGORY 6 – LIFESTYLE, TASTE, AND IDENTITY
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.LIFESTYLE,
@@ -366,7 +498,8 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Pasta' },
       { label: 'B', value: 'Pizza' },
       { label: 'C', value: 'Curry' },
-      { label: 'D', value: 'Something sweet' }
+      { label: 'D', value: 'Burger' },
+      { label: 'E', value: 'Something sweet' }
     ]
   },
   {
@@ -388,7 +521,8 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Italian' },
       { label: 'B', value: 'Japanese' },
       { label: 'C', value: 'Indian' },
-      { label: 'D', value: 'Mexican' }
+      { label: 'D', value: 'Mexican' },
+      { label: 'E', value: 'Mediterranean' }
     ]
   },
   {
@@ -409,8 +543,9 @@ const questions: QuestionSeed[] = [
     options: [
       { label: 'A', value: 'Football' },
       { label: 'B', value: 'Rugby' },
-      { label: 'C', value: 'Tennis' },
-      { label: 'D', value: 'None' }
+      { label: 'C', value: 'F1' },
+      { label: 'D', value: 'Tennis' },
+      { label: 'E', value: 'None' }
     ]
   },
   {
@@ -421,7 +556,8 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Gym' },
       { label: 'B', value: 'Running' },
       { label: 'C', value: 'Team sport' },
-      { label: 'D', value: 'I avoid it' }
+      { label: 'D', value: 'Classes' },
+      { label: 'E', value: 'I avoid it' }
     ]
   },
   {
@@ -443,11 +579,36 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Productive' },
       { label: 'B', value: 'Social' },
       { label: 'C', value: 'Restful' },
-      { label: 'D', value: 'Adventurous' }
+      { label: 'D', value: 'Adventurous' },
+      { label: 'E', value: 'Unplanned' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.LIFESTYLE,
+    text: 'Film you\'ve rewatched the most?',
+    options: [
+      { label: 'A', value: 'Comfort classic' },
+      { label: 'B', value: 'Action blockbuster' },
+      { label: 'C', value: 'Comedy' },
+      { label: 'D', value: 'Drama' },
+      { label: 'E', value: 'I don\'t rewatch' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.LIFESTYLE,
+    text: 'Switch-your-brain-off show?',
+    options: [
+      { label: 'A', value: 'Reality TV' },
+      { label: 'B', value: 'Sitcom' },
+      { label: 'C', value: 'Crime' },
+      { label: 'D', value: 'Sport' },
+      { label: 'E', value: 'YouTube' }
     ]
   },
 
-  // CATEGORY 7 – IMAGINATION AND IDENTITY
+  // CATEGORY 7 – IMAGINATION, POWER, AND IDENTITY
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.IMAGINATION,
@@ -456,7 +617,20 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Ban something annoying' },
       { label: 'B', value: 'Force something healthy' },
       { label: 'C', value: 'Redistribute wealth' },
-      { label: 'D', value: 'Step down early' }
+      { label: 'D', value: 'Abolish work' },
+      { label: 'E', value: 'Step down early' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.IMAGINATION,
+    text: 'Cartoon world for a week?',
+    options: [
+      { label: 'A', value: 'Simpsons' },
+      { label: 'B', value: 'Pokémon' },
+      { label: 'C', value: 'Studio Ghibli' },
+      { label: 'D', value: 'Adventure Time' },
+      { label: 'E', value: 'Rick and Morty' }
     ]
   },
   {
@@ -467,7 +641,20 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Dog' },
       { label: 'B', value: 'Cat' },
       { label: 'C', value: 'Bird' },
-      { label: 'D', value: 'Dolphin' }
+      { label: 'D', value: 'Dolphin' },
+      { label: 'E', value: 'Lone wolf' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.IMAGINATION,
+    text: 'Full-body tattoo would be…',
+    options: [
+      { label: 'A', value: 'Art' },
+      { label: 'B', value: 'Symbols' },
+      { label: 'C', value: 'Text' },
+      { label: 'D', value: 'Abstract chaos' },
+      { label: 'E', value: 'I\'d refuse' }
     ]
   },
   {
@@ -478,13 +665,26 @@ const questions: QuestionSeed[] = [
       { label: 'A', value: 'Teleportation' },
       { label: 'B', value: 'Time travel' },
       { label: 'C', value: 'Mind reading' },
-      { label: 'D', value: 'Perfect health' }
+      { label: 'D', value: 'Perfect health' },
+      { label: 'E', value: 'Infinite energy' }
     ]
   },
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.IMAGINATION,
-    text: 'Would you add 100 frail years to your life?',
+    text: 'Two-hour moment in history?',
+    options: [
+      { label: 'A', value: 'Ancient civilisation' },
+      { label: 'B', value: 'Major war' },
+      { label: 'C', value: 'Scientific breakthrough' },
+      { label: 'D', value: 'Religious event' },
+      { label: 'E', value: 'Personal curiosity' }
+    ]
+  },
+  {
+    type: QuestionType.SCENARIO,
+    category: QuestionCategory.IMAGINATION,
+    text: 'Add 100 frail years to your life?',
     options: [
       { label: 'A', value: 'Yes' },
       { label: 'B', value: 'No' },
@@ -495,27 +695,20 @@ const questions: QuestionSeed[] = [
   {
     type: QuestionType.SCENARIO,
     category: QuestionCategory.IMAGINATION,
-    text: 'You can live forever but must watch everyone you love die. Accept?',
+    text: 'New holiday would celebrate…',
     options: [
-      { label: 'A', value: 'Yes' },
-      { label: 'B', value: 'No' },
-      { label: 'C', value: 'Only if others could too' },
-      { label: 'D', value: 'Need more info' }
+      { label: 'A', value: 'Rest' },
+      { label: 'B', value: 'Friendship' },
+      { label: 'C', value: 'Gratitude' },
+      { label: 'D', value: 'Play' },
+      { label: 'E', value: 'Chaos' }
     ]
   }
 ];
 
 export function seedQuestions() {
-  // Clear old questions first to refresh the question bank
-  try {
-    dbHelpers.prepare('DELETE FROM questions').run();
-    console.log('Cleared old questions');
-  } catch (error) {
-    console.log('No old questions to clear');
-  }
-
   const insertStmt = dbHelpers.prepare(`
-    INSERT INTO questions (id, type, category, text, options, insight)
+    INSERT OR IGNORE INTO questions (id, type, category, text, options, insight)
     VALUES (?, ?, ?, ?, ?, ?)
   `);
 
