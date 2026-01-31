@@ -10,7 +10,9 @@ import {
   type ConsentRevealPayload
 } from '@hyt/shared';
 
-const SOCKET_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+// Socket.io connects to the base URL, not the /api endpoint
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+const SOCKET_URL = API_URL.replace('/api', '');
 
 class SocketService {
   private socket: Socket | null = null;
@@ -18,12 +20,18 @@ class SocketService {
   connect(token: string) {
     if (this.socket?.connected) return;
 
+    console.log('Connecting to socket at:', SOCKET_URL);
     this.socket = io(SOCKET_URL, {
-      auth: { token }
+      auth: { token },
+      transports: ['websocket', 'polling']
     });
 
     this.socket.on('connect', () => {
-      console.log('Socket connected');
+      console.log('Socket connected successfully');
+    });
+
+    this.socket.on('connect_error', (error) => {
+      console.error('Socket connection error:', error);
     });
 
     this.socket.on('disconnect', () => {

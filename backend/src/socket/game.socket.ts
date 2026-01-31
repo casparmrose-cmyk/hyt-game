@@ -37,12 +37,15 @@ export function setupGameSocket(io: Server) {
     // Join room
     socket.on(SocketEvent.JOIN_ROOM, ({ roomId, playerName }: JoinRoomPayload) => {
       try {
+        console.log(`User ${socket.userId} joining room ${roomId}`);
         RoomService.joinRoom(roomId, socket.userId!);
         socket.join(roomId);
 
         const room = RoomService.getRoom(roomId);
+        console.log(`Room ${roomId} now has ${room?.players.length} players`);
         io.to(roomId).emit(SocketEvent.PLAYER_JOINED, room);
       } catch (error: any) {
+        console.error(`Error joining room: ${error.message}`);
         socket.emit(SocketEvent.ERROR, { message: error.message });
       }
     });

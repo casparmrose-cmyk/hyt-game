@@ -8,6 +8,10 @@ primary_region = "sjc"
   NODE_ENV = "production"
   PORT = "3000"
 
+[mounts]
+  source = "hyt_data"
+  destination = "/data"
+
 [http_service]
   internal_port = 3000
   force_https = true

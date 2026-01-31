@@ -6,7 +6,10 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const dbPath = path.join(__dirname, '../../hyt.db');
+// Use /data for production (Fly.io volume), fallback to local for development
+const dbPath = process.env.NODE_ENV === 'production'
+  ? '/data/hyt.db'
+  : path.join(__dirname, '../../hyt.db');
 
 let SQL: any;
 let db: SqlJsDatabase;

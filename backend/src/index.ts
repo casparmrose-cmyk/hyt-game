@@ -13,9 +13,20 @@ dotenv.config();
 
 const app = express();
 const httpServer = createServer(app);
+
+// Allow multiple frontend origins (production, preview deployments, local dev)
+const allowedOrigins = [
+  process.env.FRONTEND_URL || 'http://localhost:5173',
+  'http://localhost:5173',
+  'http://localhost:5174',
+  'https://howyouthink.co',
+  'https://www.howyouthink.co',
+  /https:\/\/.*\.vercel\.app$/ // Match all Vercel preview URLs
+];
+
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: allowedOrigins,
     credentials: true
   }
 });
@@ -24,7 +35,7 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: allowedOrigins,
   credentials: true
 }));
 app.use(express.json());
